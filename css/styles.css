@@ -733,6 +733,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 250ms, background-color 250ms, box-shadow 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+  
+.modal-close-icon {
+    fill: currentColor;
+}
+  
+.modal-close:hover,
+.modal-close:focus {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
 }
 
 .is-hidden {
@@ -778,11 +790,12 @@ body {
     transition: border-color 250ms linear ;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.modal-text-input:hover,
 .modal-text-input:focus {
     border-color: var(--accent-color);
 }
 
+.modal-text-input:hover + .input-icon,
 .modal-text-input:focus + .input-icon {
     fill: var(--accent-color);
 }
@@ -806,6 +819,8 @@ body {
     outline: none;
     transition: border-color 250ms linear ;
 }
+
+.modal-form-text:hover,
 .modal-form-text:focus {
     border-color: var(--accent-color);
 }
